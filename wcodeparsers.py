@@ -1,3 +1,6 @@
+from datetime import date, timedelta
+
+
 def parse_direction(dir):
     if (45 <= dir < 135):
         return 'east'
@@ -6,6 +9,14 @@ def parse_direction(dir):
     if (225 <= dir < 315):
         return 'west'
     return 'north'
+
+def parse_time(t):
+    if (t >= 48):
+        return str(date.today() + timedelta(days=2)) + 'at ' + str(t - 48) + ' o\'clock'
+    elif (t >= 24):
+        return str(date.today() + timedelta(days=1)) + 'at ' + str(t - 24) + ' o\'clock'
+    else:
+        return str(date.today()) + 'at ' + str(t) + ' o\'clock'
 
 def parse_weathercode(wc):
     match(wc):
