@@ -9,6 +9,10 @@
     <p>The temperature now {{ temp }} C</p>
     <p>The wind is {{ wsp }} m/s {{ wd }}</p>
     <p>{{ w }}</p>
-    <p>You can <a href="{{ url_for('schedule') }}">select</a> your schedule to see the forecast for a proper time!</p>
+    <p>You can <a href="{{ url_for('schedule') }}">select</a >
+        {% if fex:  %}
+        or <a href="{{ url_for('show') }}">use</a>
+        {% endif %}
+        your schedule to see the forecast for a proper time!</p>
 </body>
 </html>

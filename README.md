@@ -1,5 +1,5 @@
 # FlaskWeather
-My first python experiment
+Python Flask app
 
 Shows current weather in Minsk
 
